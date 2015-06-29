@@ -2,7 +2,7 @@
 ;	File 'topol.top' was generated
 ;	By user: fuentes (1000)
 ;	On host: maeda
-;	At date: Sun Jun 28 21:50:20 2015
+;	At date: Sun Jun 28 22:03:12 2015
 ;
 ;	This is a standalone topology file
 ;
@@ -16,7 +16,7 @@
 ;
 
 ; Include forcefield parameters
-#include "gromos54a7.ff/forcefield.itp"
+#include "gromos53a6_lipid.ff/forcefield.itp"
 
 [ moleculetype ]
 ; Name            nrexcl
@@ -760,80 +760,80 @@ Protein             3
 [ dihedrals ]
 ;  ai    aj    ak    al funct            c0            c1            c2            c3            c4            c5
     1     2     4     6     1    gd_14
-    2     4     6     7     1    gd_44
-    4     6     7     9     1    gd_45
+    2     4     6     7     1    gd_39
+    4     6     7     9     1    gd_40
     6     7     9    11     1    gd_14
-    7     9    11    20     1    gd_44
+    7     9    11    20     1    gd_39
     9    11    12    13     1    gd_34
-    9    11    20    22     1    gd_45
+    9    11    20    22     1    gd_40
    11    12    13    14     1    gd_34
    12    13    14    15     1    gd_34
    13    14    15    16     1    gd_34
    14    15    16    17     1    gd_29
    11    20    22    24     1    gd_14
-   20    22    24    33     1    gd_44
+   20    22    24    33     1    gd_39
    22    24    25    26     1    gd_34
-   22    24    33    35     1    gd_45
+   22    24    33    35     1    gd_40
    24    25    26    27     1    gd_34
    25    26    27    28     1    gd_34
    26    27    28    29     1    gd_34
    27    28    29    30     1    gd_29
    24    33    35    37     1    gd_14
-   33    35    37    42     1    gd_44
+   33    35    37    42     1    gd_39
    35    37    38    39     1    gd_34
-   35    37    42    44     1    gd_45
+   35    37    42    44     1    gd_40
    37    38    39    40     1    gd_34
    37    42    44    46     1    gd_14
-   42    44    46    48     1    gd_44
-   44    46    48    50     1    gd_45
+   42    44    46    48     1    gd_39
+   44    46    48    50     1    gd_40
    46    48    50    52     1    gd_14
-   48    50    52    57     1    gd_44
+   48    50    52    57     1    gd_39
    50    52    53    54     1    gd_34
-   50    52    57    59     1    gd_45
+   50    52    57    59     1    gd_40
    52    53    54    55     1    gd_34
    52    57    59    61     1    gd_14
-   57    59    61    63     1    gd_44
-   59    61    63    65     1    gd_45
+   57    59    61    63     1    gd_39
+   59    61    63    65     1    gd_40
    61    63    65    67     1    gd_14
-   63    65    67    72     1    gd_44
+   63    65    67    72     1    gd_39
    65    67    68    69     1    gd_34
-   65    67    72    74     1    gd_45
+   65    67    72    74     1    gd_40
    67    68    69    70     1    gd_34
    67    72    74    76     1    gd_14
-   72    74    76    78     1    gd_44
-   74    76    78    80     1    gd_45
+   72    74    76    78     1    gd_39
+   74    76    78    80     1    gd_40
    76    78    80    82     1    gd_14
-   78    80    82    87     1    gd_44
+   78    80    82    87     1    gd_39
    80    82    83    84     1    gd_34
-   80    82    87    89     1    gd_45
+   80    82    87    89     1    gd_40
    82    83    84    85     1    gd_34
    82    87    89    91     1    gd_14
-   87    89    91    93     1    gd_44
-   89    91    93    95     1    gd_45
+   87    89    91    93     1    gd_39
+   89    91    93    95     1    gd_40
    91    93    95    97     1    gd_14
-   93    95    97   102     1    gd_44
+   93    95    97   102     1    gd_39
    95    97    98    99     1    gd_34
-   95    97   102   104     1    gd_45
+   95    97   102   104     1    gd_40
    97    98    99   100     1    gd_34
    97   102   104   106     1    gd_14
-  102   104   106   115     1    gd_44
+  102   104   106   115     1    gd_39
   104   106   107   108     1    gd_34
-  104   106   115   117     1    gd_45
+  104   106   115   117     1    gd_40
   106   107   108   109     1    gd_34
   107   108   109   110     1    gd_34
   108   109   110   111     1    gd_34
   109   110   111   112     1    gd_29
   106   115   117   119     1    gd_14
-  115   117   119   128     1    gd_44
+  115   117   119   128     1    gd_39
   117   119   120   121     1    gd_34
-  117   119   128   130     1    gd_45
+  117   119   128   130     1    gd_40
   119   120   121   122     1    gd_34
   120   121   122   123     1    gd_34
   121   122   123   124     1    gd_34
   122   123   124   125     1    gd_29
   119   128   130   132     1    gd_14
-  128   130   132   134     1    gd_44
-  130   132   134   136     1    gd_45
+  128   130   132   134     1    gd_39
+  130   132   134   136     1    gd_40
   132   134   136   137     1    gd_14
 
 [ dihedrals ]
@@ -896,8 +896,11 @@ Protein             3
 #include "posre.itp"
 #endif
 
+; Include DPPC chain topology
+#include "dppc.itp"
+
 ; Include water topology
-#include "gromos54a7.ff/spc.itp"
+#include "gromos53a6.ff/spc.itp"
 
 #ifdef POSRES_WATER
 ; Position restraint for each water oxygen
@@ -907,7 +910,7 @@ Protein             3
 #endif
 
 ; Include topology for ions
-#include "gromos54a7.ff/ions.itp"
+#include "gromos53a6.ff/ions.itp"
 
 [ system ]
 ; Name
