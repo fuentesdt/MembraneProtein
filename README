@@ -1,7 +1,30 @@
 
 http://www.bevanlab.biochem.vt.edu/Pages/Personal/justin/gmx-tutorials/membrane_protein/01_pdb2gmx.html
 
-gmx pdb2gmx -f KALP-15_princ.pdb -o KALP-15_processed.gro -ignh -ter -water spc
+Step 1
+======
+gmx_mpi pdb2gmx -f KALP-15_princ.pdb -o KALP-15_processed.gro -ignh -ter -water spc
+	GROMOS96 53A6 parameter set. Choose "None" for the termini; 
+
+Step 2
+======
+	create directory: gromos53a6_lipid.ff/
+
+Step 3
+======
+gmx_mpi editconf -f dppc128.pdb -o dppc128.gro 
+
+gmx_mpi grompp -f minim.mdp -c dppc128.gro -p topol_dppc.top -o em.tpr
 
 
+gmx_mpi trjconv -s em.tpr -f dppc128.gro -o dppc128_whole.gro -pbc mol -ur compact
+	Select a group: 0
 
+gmx_mpi editconf -f KALP-15_processed.gro -o KALP_newbox.gro -c -box 6.41840 6.44350 6.59650
+
+   (for other systems...) gmx_mpi editconf -f protein.gro -o protein_newbox.gro -box  6.41840 6.44350 6.59650 -center 3.20920  3.22175  3.29825 
+
+cat KALP_newbox.gro dppc128_whole.gro > system.gro
+
+
+gmx_mpi genrestr -f KALP_newbox.gro -o strong_posre.itp -fc 100000 100000 100000
